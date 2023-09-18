@@ -216,6 +216,8 @@
     }
 
     .reviews-section .right-column {
+        display: flex;
+        align-items: center;
         padding-top: 90px;
         padding-bottom: 90px;
         -webkit-clip-path: none;
@@ -223,7 +225,7 @@
     }
 
     .review-slide {
-        height: 40vh;
+        height: 80vh;
     }
 
     .review-text {
