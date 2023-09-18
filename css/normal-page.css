@@ -1,0 +1,43 @@
+header {
+    justify-content: space-between;
+}
+
+.mobile-logo, .show-on-mobile {
+    display: block;
+    float: left;
+}
+
+.hero {
+    background-image: var(--gradient-2);
+    min-height: 40vh;
+}
+
+.hero-text-container h1 {
+    background: none;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white;
+    font-size: clamp(3rem, 14vw, 6rem);
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        background-image: none;
+        min-height: 30vh;
+    }
+    
+    .hero-text-container h1 {
+        text-align: center;
+    }
+    
+    .hero-left {
+        min-height: 30vh;
+        background-image: var(--gradient-2);
+    }
+
+    .hero-right {
+        display: none;
+    }
+}
+

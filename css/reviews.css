@@ -1,0 +1,113 @@
+:root {
+    --profile-photo-width: 150px;
+}
+
+.review-section {
+    background-color: var(--very-light-grey);
+}
+
+.review-section > p {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.review-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-top: 130px;
+}
+
+.review-column {
+    width: 47.5%;
+}
+
+.review-card {
+    flex-basis: 100%;
+    position: relative;
+    margin-bottom: 120px;
+    padding: 5% 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px grey;
+}
+
+.review-card img {
+    display: block;
+    width: var(--profile-photo-width); 
+    position: absolute;
+    top: calc(var(--profile-photo-width)/-2);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px grey;
+}
+
+.review-card-text {
+    margin-top: calc((var(--profile-photo-width)/2));
+}
+
+.review-card-text i {
+    color: var(--light-grey);
+}
+
+.review-card-text::before {
+    content: url('../media/quote-left-solid.svg');
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+}
+
+.review-card-text::after {
+    content: url('../media/quote-right-solid.svg');
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.review-card-text::before, .review-card-text::after {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    filter: invert(82%) sepia(14%) saturate(0%) hue-rotate(280deg) brightness(80%) contrast(90%);
+}
+
+.location {
+    float: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--medium-grey);  
+}
+
+.review-name {
+    color: grey;
+    display: inline;
+    float: right;
+}
+
+.review-stars {
+    display: inline;
+    color: var(--accent-color-1);
+}
+
+@media (max-width: 1000px) {
+    .review-section > p {
+        width: 100%;
+    }
+
+    .review-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .review-card-text {
+        font-size: 1.3rem;
+    }
+    
+    .review-name {
+        font-size: 1.2rem;
+    }
+}
