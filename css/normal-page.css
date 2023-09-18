@@ -28,12 +28,14 @@ header {
     }
     
     .hero-text-container h1 {
-        text-align: center;
+        text-align: right;
     }
     
     .hero-left {
         min-height: 30vh;
         background-image: var(--gradient-2);
+        -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 5% 100%);
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 5% 100%); 
     }
 
     .hero-right {
