@@ -239,7 +239,7 @@ nav {
    transition: 0.3s;
 }
 
-.nav-item i {
+.fa-sort-down {
     transform: translateY(-30%);
     padding-left: 10px;
     font-size: 1rem;
