@@ -209,7 +209,7 @@ button i {
 }
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  HEADER  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 header {
     display: flex;
     width: 100vw;
@@ -226,6 +226,7 @@ header {
 
 nav {
     display: flex;
+    position: relative;
     justify-content: flex-end;
     align-items: center;
 }
@@ -238,9 +239,15 @@ nav {
    transition: 0.3s;
 }
 
+.nav-item i {
+    transform: translateY(-30%);
+    padding-left: 10px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
 .nav-item:hover {
     color: var(--accent-color-1);
-    scale: 1.05;
 }
 
 .nav-cta {
@@ -256,7 +263,51 @@ nav {
     scale: 1.05;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  LOGO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.services-dropdown {
+    position: absolute;
+    bottom: 100px;
+    margin: 0;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transform: scaleY(0);
+    transition: 0.3s;
+}
+
+.services-dropdown .nav-item {
+    display: block;
+    margin: 0;
+    padding: 16px 30px;
+    background-color: rgba(243, 243, 243, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.services-dropdown .nav-item:last-child {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: 0px 10px 13px -5px rgba(0,0,0,0.32);
+}
+
+.services-dropdown .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.services-link-container {
+    margin: 0;
+    width: 100%;
+}
+
+.services-link-container:hover .services-dropdown {
+    top: 40px;
+    transform: scaleY(1);
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.services-link-container:hover .fa-sort-down {
+    transform: scaleY(-1);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  LOGO  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .logo {
     display: block;
     height: var(--logo-height);
@@ -277,7 +328,7 @@ nav {
     box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  HOMEPAGE HERO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  HOMEPAGE HERO  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .hero {
     display: flex;
     min-height: 100vh;
@@ -323,7 +374,7 @@ nav {
     font-size: 2rem;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INTRO SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INTRO SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .intro {
     display: flex;
     align-items: center;
@@ -350,7 +401,7 @@ nav {
     font-weight: 700;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVICES SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVICES SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .services {
     text-align: center;
     padding-bottom: 80px;
@@ -452,7 +503,7 @@ nav {
 }
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ QUOTE SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    QUOTE SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .quote-section {
     display: flex;
     align-items: stretch;

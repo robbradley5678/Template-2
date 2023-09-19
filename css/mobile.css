@@ -113,6 +113,71 @@
         display: block;
     }
 
+    .nav-item {
+        display: block;
+    }
+
+    .fa-sort-down {
+        float: right;
+        transform: translateY(0);
+    }
+
+    .services-dropdown {
+        position: static;
+        top: 0;
+        margin: 0;
+        padding-top: 0;
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 1;
+        transform: scaleY(1);
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    
+    .services-dropdown .nav-item {
+        display: block;
+        margin: 0;
+        padding: 16px 30px;
+        background-color: rgba(243, 243, 243, 0);
+        backdrop-filter: blur(0px);
+        color: white;
+        border: none;
+    }
+    
+    .services-dropdown .nav-item:last-child {
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    
+    .services-dropdown .nav-item:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .services-link-container {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .services-link {
+        pointer-events: none;
+        border: none;
+    }
+
+    .services-link-container:hover .services-dropdown {
+        top: 40px;
+        transform: scaleY(1);
+        opacity: 1;
+        transition: 0.3s;
+    }
+    
+    .services-link-container:hover .fa-sort-down {
+        transform: scaleY(1);
+    }
+
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HERO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     .hero {
         flex-direction: column-reverse;
@@ -313,4 +378,12 @@
     content: url(../media/xmark-solid.svg);
     filter: grayscale(100%) brightness(100%) contrast(100%) invert(100%);
     transform: rotateY(180deg);
+}
+
+.expand-services-dropdown {
+    max-height: 200px;
+}
+
+.rotate-arrow {
+    transform: scaleY(-1) !important; 
 }
